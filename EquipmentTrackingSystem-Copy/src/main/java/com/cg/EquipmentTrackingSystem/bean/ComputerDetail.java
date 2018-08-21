@@ -1,6 +1,6 @@
 package com.cg.EquipmentTrackingSystem.bean;
 
-import javax.persistence.CascadeType;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
