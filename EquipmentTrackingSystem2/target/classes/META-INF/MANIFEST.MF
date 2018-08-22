@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: EquipmentTrackingSystem
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: deepr
+Implementation-Vendor-Id: com.cg
+Build-Jdk: 1.8.0_171
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/EquipmentTrackingSystem
+Created-By: Maven Integration for Eclipse
+

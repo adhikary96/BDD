@@ -6,12 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Entity
+//@NamedQuery(name="equipmentQuery", query="SELECT e FROM Equipment WHERE e.machineId=(:id)")
 public class Equipment {
 	
 	@Column(name="equipment_type")
@@ -59,6 +61,11 @@ public class Equipment {
 	}
 	public void setDetail(ComputerDetail detail) {
 		this.detail = detail;
+	}
+	@Override
+	public String toString() {
+		return "Equipment [equipmentType=" + equipmentType + ", equipmentTag=" + equipmentTag + ", machineId="
+				+ machineId + ", -->\nrecord=" + record + ", -->\ndetail=" + detail + "]";
 	}
 	
 	

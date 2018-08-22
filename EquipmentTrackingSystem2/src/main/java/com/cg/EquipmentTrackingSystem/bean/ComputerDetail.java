@@ -1,12 +1,8 @@
 package com.cg.EquipmentTrackingSystem.bean;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -98,5 +94,14 @@ public class ComputerDetail {
 		OSVersion = oSVersion;
 	}
 
+	@Override
+	public String toString() {
+		return "ComputerDetail [computerName=" + computerName + ", diskCapacity=" + diskCapacity
+				+ ", totalInstalledMemory=" + totalInstalledMemory + ", networkCardNumber=" + networkCardNumber
+				+ ", networkCardManufacturer=" + networkCardManufacturer + ", freeSpaceInCDrive=" + freeSpaceInCDrive
+				+ ", OS=" + OS + ", OSVersion=" + OSVersion + "]";
+	}
+
+	
 	
 }

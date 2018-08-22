@@ -1,9 +1,7 @@
 package com.cg.EquipmentTrackingSystem.bean;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
@@ -93,7 +91,19 @@ public class EquipmentRecord {
 	public void setStockLocation(String stockLocation) {
 		this.stockLocation = stockLocation;
 	}
-	
+	public String getAuditDate() {
+		return auditDate;
+	}
+	public void setAuditDate(String auditDate) {
+		this.auditDate = auditDate;
+	}
+	public String getAuditLocation() {
+		return auditLocation;
+	}
+	public void setAuditLocation(String auditLocation) {
+		this.auditLocation = auditLocation;
+	}
+		
 	
 	public User getUser() {
 		return user;
@@ -107,20 +117,15 @@ public class EquipmentRecord {
 	public void setLocation(Location location) {
 		this.location = location;
 	}
+	@Override
+	public String toString() {
+		return "EquipmentRecord [purchaseMethod=" + purchaseMethod + ", seqNo=" + seqNo + ", deptId=" + deptId
+				+ ", useStatus=" + useStatus + ", costCenter=" + costCenter + ", installDate=" + installDate
+				+ ", comments=" + comments + ", stockLocation=" + stockLocation + ", auditDate=" + auditDate
+				+ ", auditLocation=" + auditLocation + ", ==>\nuser=" + user + ", ==>\nlocation=" + location + "]";
+	}
 	
 	
-	public String getAuditDate() {
-		return auditDate;
-	}
-	public void setAuditDate(String auditDate) {
-		this.auditDate = auditDate;
-	}
-	public String getAuditLocation() {
-		return auditLocation;
-	}
-	public void setAuditLocation(String auditLocation) {
-		this.auditLocation = auditLocation;
-	}
 		
 
 }
